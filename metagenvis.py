@@ -1,4 +1,4 @@
-__author__ = 'evanthia'
+__author__ = 'Evanthia Kaimaklioti'
 #comments : description of the software
 #uses this version of biopython
 #its requirements are sqlite3 
