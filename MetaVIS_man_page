@@ -1,0 +1,25 @@
+MetaVIS pipeline User Contributed Python Documentation
+
+Evanthia Kaimaklioti 
+
+sample usage: python metavis.py  -in  sample1.blastx  -b [options] –bt 0.90 –out tab_results.txt >supplementary_output.txt
+	
+
+DESCRIPTION
+
+	Aims: This Python script is designed to manipulate the output of BLASTx software run with the output 6 format. The user is advised to amend lines that select the fields where the TAXID and BLAST Bit Score (BBS), depending on where they are in the BLAST output file (see comments in the code). The BLASTx output files should be placed in the same directory:
+
+The MetaVIS output file computations and results are the following: 
+
+1.	Parses the BLASTx output file, finds the best hits for each contig 
+2.	There are two functions for selecting the TAXID, (see comments in the code). One function selects the first TAXID from those hits with many TAXIDs and the other function ignores those hits all together. Only one of the two can be called at a time. 
+3.	Finds the LCA for each contig and therefore computes the taxonomic profile of the sample
+4.	Outputs the taxonomic profile of the sample in a csv file 
+5.	Outputs the json file for the taxonomic profile of the sample to be visualised with the collapsible.html file  
+
+
+OPTIONS AND ARGUMENTS
+	-in: The name of the BLASTx output file
+	-b: the minimum BBS
+	-bt: sets the threshold window for selecting the best hits for a contig. E.g. 0.80
+	-out: the name of the output file
