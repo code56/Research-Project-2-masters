@@ -356,6 +356,8 @@ def create_structure_before_json(d, node):
 	return(
 		{'name':new_node, 'children':[create_structure_before_json(d, child_node) for child_node in d[new_node]]}
 	)
+	
+	
 if __name__ == "__main__":
 	main()
 
